@@ -1,0 +1,32 @@
+﻿@model List<MyEgitimAkademi_Portfolio.Models.Testimonial>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Referanslar Sayfası</h2>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Referans Adı</th>
+            <th>Referans Ünvan</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TestimonialID</td>
+                <td>@item.NameSurname</td>
+                <td>@item.Title</td>
+                <td>@Html.ActionLink("Sil", "DeleteTestimonial", new { id = item.TestimonialID }, new { @class = "btn btn-outline-warning", onclick = "return confirm('Silinsin mi?')" })</td>
+                <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<a href="/Testimonial/AddTestimonial" class="btn btn-outline-primary">Yeni Referans Girişi</a>

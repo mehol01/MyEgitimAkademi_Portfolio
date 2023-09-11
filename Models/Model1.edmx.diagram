@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="07e69c8752054b7abbbbb16fd4380461" Name="Diagram1" ZoomLevel="92">
+        <EntityTypeShape EntityType="MyPortfolioDbModel.About" Width="1.5" PointX="1.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Service" Width="1.5" PointX="4.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Testimonial" Width="1.5" PointX="1.5" PointY="5" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.sysdiagrams" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Category" Width="1.5" PointX="4.375" PointY="5.125" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Project" Width="1.5" PointX="8.375" PointY="4.5" />
+        <AssociationConnector Association="MyPortfolioDbModel.FK_Projects_Category" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Skill" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Address" Width="1.5" PointX="3.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Admin" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Contact" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Award" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Client" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MyPortfolioDbModel.Social" Width="1.5" PointX="10.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

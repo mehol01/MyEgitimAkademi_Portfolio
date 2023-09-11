@@ -1,0 +1,52 @@
+﻿@model List<MyEgitimAkademi_Portfolio.Models.About>
+
+<section class="w3l-contactblock" id="contact">
+    <div class="midd-w3 py-5">
+        <div class="container py-lg-4 py-md-3">
+            <div class="contact-heading text-center">
+                <span class="text">Benimle iletişime geçin! </span>
+                <h3 class="title-big">Beraber çalışmaya <span>hazır mısınız?</span></h3>
+                <p class="mt-4">Hadi bir projeye başlayalım!</p>
+            </div>
+            <div class="row mt-md-5 mt-4 pt-lg-3">
+                <div class="col-lg-5">
+                    @foreach (var item in Model)
+                    {
+                        <p>
+                            @item.Introduction
+                        </p>
+                        <ul class="address mt-md-5 mt-4">
+                            <li class="mb-3">
+                                <p><span class="fa fa-phone"></span> <a href="tel:+90-505-218-17-37">@item.Phone</a></p>
+                            </li>
+                            <li class="mb-4">
+                                <p><span class="fa fa-envelope-open"></span> <a href="mailto:mehmetolcen01@gmail.com">@item.Email</a></p>
+                            </li>
+                            <li class="">
+                                <p><span class="fa fa-map-marker"></span>@item.Address1<br>@item.Address2</p>
+                            </li>
+                        </ul>
+                    }
+
+                </div>
+
+
+                <div class="col-lg-7 mt-lg-0 mt-md-5 mt-4">
+                    <form action="/Contact/Index/" method="post">
+                        <div class="twice-two">
+                            <input type="text" class="form-control" name="" placeholder="Name" required="">
+                            <input type="email" class="form-control" name="" placeholder="Email" required="">
+                        </div>
+                        <div class="twice">
+                            <input type="text" class="form-control" name="" placeholder="Subject" required="">
+                        </div>
+                        <textarea name="" class="form-control" placeholder="Message" required=""></textarea>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-secondary btn-style mt-4">Mesaj Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+﻿@model List<MyEgitimAkademi_Portfolio.Models.Award>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Ödüllerim Sayfası</h2>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ödülün Adı</th>
+            <th>Ödülün Açıklaması</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.AwardID</td>
+                <td>@item.AwardName</td>
+                <td>@item.AwardDescription</td>
+                <td>@Html.ActionLink("Sil", "DeleteAward", new { id = item.AwardID}, new { @class = "btn btn-outline-warning", onclick = "return confirm('Silinsin mi?')" })</td>
+                <td><a href="/Award/UpdateAward/@item.AwardID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<a href="/Award/AddAward" class="btn btn-outline-primary">Yeni Ödül Girişi</a>

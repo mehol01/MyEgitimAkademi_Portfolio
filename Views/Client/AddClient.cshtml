@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "AddClient";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Müşteri Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Müşteri Adı Soyadı</label>
+    <input type="text" class="form-control" name="ClientNameSurname" />
+    <br />
+    <label>Müşteri Hakkında</label>
+    <textarea class="form-control" rows="5" name="ClientDescription"></textarea>
+    <br />
+    <label>Müşteri Görseli</label>
+    <input type="text" class="form-control" name="ClientImage" />
+    
+    <br />
+    <button class="btn btn-info">Müşteriyi Ekle</button>
+</form>

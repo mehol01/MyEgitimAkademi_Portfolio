@@ -1,0 +1,34 @@
+﻿@model List<MyEgitimAkademi_Portfolio.Models.Client>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Müşteriler Sayfası</h2>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Müşterinin Adı ve Soyadı</th>
+            <th>Müşteri Hakkında</th>
+            <th>Müşteri Fotoğrafı</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ClientID</td>
+                <td>@item.ClientNameSurname</td>
+                <td>@item.ClientDescription</td>
+                <td>@item.ClientImage</td>
+                <td>@Html.ActionLink("Sil", "DeleteClient", new { id = item.ClientID }, new { @class = "btn btn-outline-warning", onclick = "return confirm('Silinsin mi?')" })</td>
+                <td><a href="/Client/UpdateClient/@item.ClientID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<a href="/Client/AddClient" class="btn btn-outline-primary">Yeni Müşteri Bilgisi Girişi</a>

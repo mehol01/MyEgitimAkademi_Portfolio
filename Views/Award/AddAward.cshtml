@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AddAward";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Ödül Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Ödülün Adı</label>
+    <input type="text" class="form-control" name="AwardName" />
+    <br />
+    <label>Ödül Açıklaması</label>
+    <textarea class="form-control" rows="5" name="AwardDescription"></textarea>
+    <br />
+    <button class="btn btn-info">Ödülü Ekle</button>
+</form>
+

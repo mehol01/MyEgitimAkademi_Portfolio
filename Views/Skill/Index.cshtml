@@ -1,0 +1,32 @@
+﻿@model List<MyEgitimAkademi_Portfolio.Models.Skill>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeteneklerim</h2>
+
+<div>
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Yetenek</th>
+            <th>Yeterlilik</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.SkillID</td>
+                <td>@item.SkillTitle</td>
+                <td>@item.SkillValue</td>
+                <td>@Html.ActionLink("Sil", "DeleteSkill", new { id = item.SkillID }, new { @class = "btn btn-outline-warning", onclick = "return confirm('Silinsin mi?')" })</td>
+                <td><a href="/Skill/UpdateSkill/@item.SkillID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+</div>
+
+<a href="/Skill/AddSkill" class="btn btn-outline-primary">Yeni Yetenek Girişi</a>
